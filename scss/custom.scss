@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap');
+
+// 1. Include functions first
+@import "../node_modules/bootstrap/scss/functions";
+
+// 2. Variables and custom overrides
+$primary: #F59E0B;
+$secondary: #14B8A6;
+$success: #10B981;
+$info: #3B82F6;
+$warning: #F59E0B;
+$danger: #EF4444;
+$light: #F9FAFB;
+$dark: #1F2937;
+
+$body-bg: #F9FAFB;
+$body-color: #374151;
+$font-family-sans-serif: 'Inter', sans-serif;
+$headings-font-family: 'Poppins', sans-serif;
+$headings-font-weight: 600;
+
+$border-radius: 0.75rem;
+$border-radius-lg: 1rem;
+$border-radius-sm: 0.5rem;
+
+$box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+$box-shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+$box-shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+$card-border-width: 0;
+$card-cap-bg: transparent;
+$btn-padding-y: 0.75rem;
+$btn-padding-x: 1.5rem;
+$input-btn-padding-y: 0.75rem;
+$input-btn-padding-x: 1rem;
+
+// 3. Include Bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// 5. Custom Styles
+
+// Smooth scrolling
+html {
+  scroll-behavior: smooth;
+}
+
+// Hero section
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  padding: 6rem 0;
+  background-color: $light;
+  
+  .hero-text {
+    z-index: 2;
+    position: relative;
+  }
+
+  .hero-image-container {
+    position: relative;
+    z-index: 2;
+    img {
+      border-radius: 2rem;
+      box-shadow: $box-shadow-lg;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -10%;
+    right: -5%;
+    width: 50%;
+    height: 120%;
+    background: linear-gradient(135deg, rgba($primary, 0.1) 0%, rgba($secondary, 0.1) 100%);
+    border-radius: 50%;
+    z-index: 1;
+    filter: blur(80px);
+  }
+}
+
+// Card enhancements
+.pet-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  background: white;
+  border-radius: $border-radius-lg;
+  
+  img {
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: $box-shadow-lg;
+    
+    img {
+      transform: scale(1.05);
+    }
+  }
+}
+
+// Custom Buttons
+.btn {
+  font-weight: 600;
+  border-radius: 50rem;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: $box-shadow;
+  }
+}
+
+.btn-primary {
+  color: white;
+  background-color: $primary;
+  border-color: $primary;
+  
+  &:hover {
+    background-color: darken($primary, 5%);
+    border-color: darken($primary, 5%);
+    color: white;
+  }
+}
+
+// Form styling
+.form-control {
+  border-radius: $border-radius;
+  border: 1px solid #E5E7EB;
+  box-shadow: none;
+  transition: all 0.2s ease;
+  
+  &:focus {
+    border-color: $secondary;
+    box-shadow: 0 0 0 0.25rem rgba($secondary, 0.25);
+  }
+}
+
+// Animations for filtering
+.pet-item {
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  &.hide {
+    display: none;
+  }
+}
+
+// Navbar styling
+.navbar {
+  box-shadow: $box-shadow-sm;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+}
+
+.navbar-brand {
+  font-family: $headings-font-family;
+  font-weight: 700;
+  color: $primary !important;
+  font-size: 1.5rem;
+  
+  i {
+    color: $secondary;
+    margin-right: 0.5rem;
+  }
+}
+
+// Footer
+footer {
+  background-color: $dark;
+  color: $light;
+  
+  a {
+    color: rgba($light, 0.7);
+    text-decoration: none;
+    transition: color 0.2s ease;
+    
+    &:hover {
+      color: $primary;
+    }
+  }
+}

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contacta con Huellas Felices. Inicia tu proceso de adopción o haz una consulta.">
+    <title>Contacto | Huellas Felices</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body class="bg-light">
+
+    <!-- Navegación -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <i class="bi bi-suit-heart-fill fs-3"></i>
+                Huellas Felices
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegación">
+                <i class="bi bi-list fs-2 text-primary"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-medium">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="adopciones.html">Adopciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-primary" aria-current="page" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Contacto -->
+    <header class="py-5 bg-white border-bottom">
+        <div class="container text-center py-4">
+            <h1 class="display-4 fw-bold">Ponte en <span class="text-primary">contacto</span></h1>
+            <p class="lead text-muted mt-3 max-w-75 mx-auto">¿Listo para adoptar o tienes alguna pregunta? Escríbenos y te responderemos lo antes posible.</p>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <section class="py-5">
+        <div class="container py-5">
+            <div class="row g-5 align-items-center">
+                
+                <div class="col-lg-6">
+                    <div class="bg-white p-5 rounded-4 shadow-sm border-0 h-100">
+                        <h2 class="h3 fw-bold mb-4">Envíanos un mensaje</h2>
+                        
+                        <!-- Formulario de Contacto con Validación Bootstrap -->
+                        <form id="contactForm" class="needs-validation" novalidate>
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label fw-semibold">Nombre Completo</label>
+                                <div class="input-group has-validation">
+                                    <span class="input-group-text bg-light border-end-0"><i class="bi bi-person text-muted"></i></span>
+                                    <input type="text" class="form-control border-start-0" id="nombre" placeholder="Ej: Ana García" required>
+                                    <div class="invalid-feedback">
+                                        Por favor, introduce tu nombre.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="email" class="form-label fw-semibold">Correo Electrónico</label>
+                                <div class="input-group has-validation">
+                                    <span class="input-group-text bg-light border-end-0"><i class="bi bi-envelope text-muted"></i></span>
+                                    <input type="email" class="form-control border-start-0" id="email" placeholder="ejemplo@correo.com" required>
+                                    <div class="invalid-feedback">
+                                        Por favor, introduce un correo electrónico válido.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="asunto" class="form-label fw-semibold">Asunto</label>
+                                <select class="form-select" id="asunto" required>
+                                    <option value="" selected disabled>Selecciona un motivo...</option>
+                                    <option value="adopcion">Información sobre adopción</option>
+                                    <option value="voluntariado">Quiero ser voluntario</option>
+                                    <option value="donacion">Donaciones</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Por favor, selecciona un asunto.
+                                </div>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="mensaje" class="form-label fw-semibold">Tu Mensaje</label>
+                                <textarea class="form-control" id="mensaje" rows="4" placeholder="¿En qué podemos ayudarte?" required></textarea>
+                                <div class="invalid-feedback">
+                                    El mensaje no puede estar vacío.
+                                </div>
+                            </div>
+
+                            <div class="mb-4 form-check">
+                                <input type="checkbox" class="form-check-input" id="privacidad" required>
+                                <label class="form-check-label small text-muted" for="privacidad">
+                                    He leído y acepto la política de privacidad.
+                                </label>
+                                <div class="invalid-feedback">
+                                    Debes aceptar la política de privacidad antes de enviar.
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-lg w-100">
+                                <i class="bi bi-send me-2"></i>Enviar Mensaje
+                            </button>
+                        </form>
+
+                        <!-- Mensaje de éxito oculto -->
+                        <div id="successMessage" class="alert alert-success mt-4 d-none" role="alert">
+                            <i class="bi bi-check-circle-fill me-2"></i> ¡Mensaje enviado con éxito! Nos pondremos en contacto contigo pronto.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="mb-5">
+                        <h3 class="h4 fw-bold mb-4">Información de Contacto</h3>
+                        <div class="d-flex align-items-start mb-4">
+                            <div class="bg-primary bg-opacity-10 text-primary rounded-circle p-3 me-3">
+                                <i class="bi bi-geo-alt fs-4"></i>
+                            </div>
+                            <div>
+                                <h4 class="h6 fw-bold mb-1">Visítanos</h4>
+                                <p class="text-muted mb-0">Calle Esperanza, 45<br>28080 Madrid, España</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-start mb-4">
+                            <div class="bg-secondary bg-opacity-10 text-secondary rounded-circle p-3 me-3">
+                                <i class="bi bi-telephone fs-4"></i>
+                            </div>
+                            <div>
+                                <h4 class="h6 fw-bold mb-1">Llámanos</h4>
+                                <p class="text-muted mb-0">+34 900 123 456<br><small>Lunes a Viernes: 10:00 - 18:00</small></p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-start">
+                            <div class="bg-info bg-opacity-10 text-info rounded-circle p-3 me-3">
+                                <i class="bi bi-envelope fs-4"></i>
+                            </div>
+                            <div>
+                                <h4 class="h6 fw-bold mb-1">Escríbenos</h4>
+                                <p class="text-muted mb-0">adopciones@huellasfelices.org</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="pt-5 pb-4 bg-dark">
+        <div class="container">
+            <div class="row border-top border-secondary border-opacity-25 pt-4">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0 text-white-50 small">&copy; 2026 Huellas Felices. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
